@@ -6,8 +6,12 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <CommentBox />
-        <CommentList />
+        <div className="row">
+          <CommentBox />
+        </div>
+        <div className="row">
+          <CommentList />
+        </div>
       </div>
     );
   }
