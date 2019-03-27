@@ -10,6 +10,10 @@ beforeEach(() => {  // Function executes before each test
   wrapped = shallow(<App />)
 })
 
+afterEach(() => { // Function executes after each test
+  wrapped.unmount();  // Cleanup to umount our component from JSDOM
+})
+
 it('shows a comment box', () => {
   expect(wrapped.find(CommentBox).length).toEqual(1); // Test to make sure we have one instance of CommentBox
 });
