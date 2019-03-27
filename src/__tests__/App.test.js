@@ -1,14 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from '../containers/App';
+import { shallow } from 'enzyme';
+import CommentBox from '../components/CommentBox';
 
 it('shows a comment box', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  const wrapped = shallow(<App />); // Wrapped version of our component
 
-  // Looks inside the div
-  // and checks to see if the CommentBox is in there
-  expect(div.innerHTML).toContain('Comment Box')
-
-  ReactDOM.unmountComponentAtNode(div); // Unmounts component. Ideal for component cleanup
+  expect(wrapped.find(CommentBox).length).toEqual(1); // Test to make sure we have one instance of CommentBox
 });
