@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import CommentBox from '../components/CommentBox';
+import CommentList from './CommentList';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <CommentBox />
+        <CommentList />
       </div>
     );
   }

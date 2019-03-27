@@ -8,7 +8,7 @@ class CommentList extends Component {
   render() { 
     return (
       <div>
-        <h1>CommentList</h1>
+        <h1>Comment List</h1>
       </div>
     );
   }
