@@ -1,8 +1,8 @@
 import React from 'react';
-import App from '../containers/App';
+import App from '../App';
 import { shallow } from 'enzyme';
-import CommentBox from '../containers/CommentBox';
-import CommentList from '../containers/CommentList';
+import CommentBox from '../CommentBox';
+import CommentList from '../CommentList';
 
 let wrapped; // Scope for our tests
 

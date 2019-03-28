@@ -11,3 +11,5 @@ export default (props) => {
     </Provider>
   )
 }
+
+// Props.children renders any children that is provided
