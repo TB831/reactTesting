@@ -12,7 +12,7 @@ beforeEach(() => {
       <App />
     </Root>
   );
-  
+
   moxios.install(); // Intercepts axios requests and terminates
   moxios.stubRequest('http://jsonplaceholder.typicode.com/comments', {  // 
     status: 200,
@@ -43,7 +43,7 @@ it('cant fetch a list of comments and display them', (done) => {  // Done allows
   // Find the 'fetchComments' button and click it
   wrapped.find('.fetch-comments').simulate('click');
   // Add tiny delay to allow moxios to catchup
-  setTimeout(() => {
+  moxios.wait(() => {
     wrapped.update();
     // Expect to find a list of comments
     expect(wrapped.find('li').length).toEqual(2);

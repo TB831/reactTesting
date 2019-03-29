@@ -35,7 +35,7 @@ describe('the text area', () => {
   });
   
   it('checks if input is submitted and textarea gets emptied', () => {
-    wrapped.find('form').simulate('submit');
+    wrapped.find('.create-comment').simulate('click');
     wrapped.update();
     expect(wrapped.find('textarea').prop('value')).toEqual('');
   });
